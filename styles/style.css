@@ -62,7 +62,7 @@
 .content__title {
   font-family: inherit;
   font-size: inherit;
-  font-weight: var(--Inter-font-bold-weight);
+  font-variation-settings: 'wght' var(--Inter-font-bold-weight);
   padding-inline-start: 10px;
   padding-block-start: 5px;
   padding-inline-end: 10px;
@@ -114,7 +114,7 @@
   top: var(--main-content-img-text-top);
   right: var(--main-content-img-text-right);
   font-family: var(--ascent-family-font), fantasy;
-  font-weight: var(--Inter-font-regular-weight);
+  font-variation-settings: 'wght' var(--Inter-font-regular-weight);
   font-size: 14px;
   mix-blend-mode: hard-light;
   opacity: 0.6;
@@ -193,7 +193,7 @@
 }
 
 .card__icon-button:not(:hover) .core {
-  fill: var(--heart-hover);
+  fill: var(--heart-not-active);
   transition-delay: 0.03s;
 }
 
@@ -210,15 +210,6 @@
 .card__icon-button:not(:hover) .main-body {
   fill: var(--heart-not-active);
   transition-delay: 0s;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--contour-color);
-}
-
-.card__icon-button:not(:hover) .core {
-  fill: var(--heart-not-active);
-  transition-delay: 0.03s;
 }
 
 .card__icon-button:active .main-body,
