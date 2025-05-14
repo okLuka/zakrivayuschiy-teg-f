@@ -9,3 +9,142 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+.card__icon-focus:focus {
+  outline: none;
+}
+
+.card__icon-focus:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: -2px;
+}
+
+.contour {
+  fill: var(--heart-hover);
+}
+
+.sparks {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.core {
+  fill: var(--heart-not-active);
+  transition-delay: 0s;
+  transition: fill 0.3s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--contour-color);
+}
+
+.card__icon-button:not(:hover) .core {
+  fill: var(--heart-not-active);
+  transition-delay: 0.03s;
+}
+
+.main-body {
+  fill: var(--heart-not-active);
+  transition-delay: 0.05s;
+  transition: fill 0.3s;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--contour-color);
+}
+
+.card__icon-button:not(:hover) .main-body {
+  fill: var(--heart-not-active);
+  transition-delay: 0s;
+}
+
+.card__icon-button:active .main-body,
+.card__icon-button:active .core {
+  fill: var(--heart-fill-color);
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-fill-color);
+  transition-delay: 0s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-fill-color);
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-fill-color);
+  transition-delay: 0.06s;
+}
+
+.heart {
+  transform-origin: center;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s 1 forwards;
+}
+
+@keyframes heart-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-flash 0.3s ease-in 0.3s 1 forwards;
+}
+
+@keyframes sparks-flash {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.like-icon:not(.is-liked) .contour {
+  fill: var(--contour-color);
+  transition: fill 0.1s linear;
+}
+
+.button-animation {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.button-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-animation:is(:hover)::before {
+  transform: scaleX(1);
+}
+
+.button-animation:focus {
+  outline: none;
+}
+
+.button-animation:focus-visible {
+  box-shadow: 2px 2px 0 var(--main-color);
+}
