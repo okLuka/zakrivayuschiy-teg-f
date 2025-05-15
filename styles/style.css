@@ -13,6 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--Inter-font-regular-weight);
   background-image: var(--background-image);
   background-attachment: fixed;
   background-position: center;
@@ -68,7 +69,6 @@
   padding-inline-end: 10px;
   padding-block-end: var(--main-content-padding-block-end);
   outline: 2px solid var(--main-color);
-  min-block-size: 31px;
 }
 
 .content__img-block {
@@ -147,7 +147,6 @@
   font-family: inherit;
   font-size: inherit;
   line-height: 21px;
-  font-variation-settings: 'wght' var(--Inter-font-regular-weight);
 }
 
 .content__button-block {
@@ -165,6 +164,7 @@
   cursor: pointer;
   height: 38px;
   width: 40px;
+  transition: outline 0.2s ease;
 }
 
 .card__like-button {

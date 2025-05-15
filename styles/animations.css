@@ -25,6 +25,7 @@
 
 .sparks {
   opacity: 0;
+  fill: var(--heart-fill-color);
   transition: opacity 0.3s ease;
 }
 

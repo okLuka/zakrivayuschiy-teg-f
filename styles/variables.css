@@ -27,7 +27,7 @@
     calc(322px + 42 * ((100vw - 375px) / 1065)),
     364px
   );
-  --main-content-padding-block-end: 0;
+  --main-content-padding-block-end: 4px;
   --main-content-img-text-top: 27px;
   --main-content-img-text-right: 25px;
   --main-content-text-padding-inline-end: 25px;
